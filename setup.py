@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 __version__ = "0.1.0"
 
 
-# More information about setting these values: https://github.com/Sceptre/sceptre-hook-template/wiki
+# More information on setting these values: https://github.com/Sceptre/sceptre-hook-template/wiki
 
 HOOK_NAME = 'sceptre-hook-template'  # lowercase, snakecase, use `-` as separator.
 HOOK_MODULE_NAME = 'hook.hook'  # do not change.
