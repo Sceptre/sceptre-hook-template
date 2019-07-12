@@ -1,17 +1,23 @@
 from setuptools import setup, find_packages
 
-__version__ = "0.1.0"
+__version__ = "1.0.0"
 
 
-# More information on setting these values: https://github.com/Sceptre/sceptre-hook-template/wiki
+# More information on setting these values:
+# https://github.com/Sceptre/project/wiki/sceptre-hook-template
 
-HOOK_NAME = 'sceptre-hook-template'  # lowercase, snakecase, use `-` as separator.
-HOOK_MODULE_NAME = 'hook.hook'  # do not change.
-HOOK_COMMAND_NAME = 'custom_hook'  # the hook call in sceptre e.g. !command_name.
-HOOK_CLASS = 'CustomHook'  # CamelCase name of hook class in hook.hook.
+# lowercase, use `-` as separator.
+HOOK_NAME = 'sceptre-hook-template'
+# the hook call in sceptre e.g. !command_name.
+HOOK_COMMAND_NAME = 'custom_hook'
+HOOK_MODULE_NAME = 'hook.{}'.format(HOOK_COMMAND_NAME)  # do not change.
+# CamelCase name of hook class in hook.{HOOK_COMMAND_NAME}.
+HOOK_CLASS = 'CustomHook'
 HOOK_DESCRIPTION = ''  # one line summary description
-HOOK_AUTHOR = 'Sceptre'  # if multiple use a single string with comma separated names.
-HOOK_AUTHOR_EMAIL = 'sceptre@cloudreach.com'  # if multiple use single string with commas.
+# if multiple use a single string with comma separated names.
+HOOK_AUTHOR = 'Sceptre'
+# if multiple use single string with commas.
+HOOK_AUTHOR_EMAIL = 'sceptre@cloudreach.com'
 HOOK_URL = 'https://github.com/sceptre/{}'.format(HOOK_NAME)
 
 with open("README.md") as readme_file:
@@ -39,7 +45,8 @@ setup(
     author_email=HOOK_AUTHOR_EMAIL,
     license='Apache2',
     url=HOOK_URL,
-    packages=find_packages(exclude=["*.tests", "*.tests.*", "tests.*", "tests"]),
+    packages=find_packages(
+        exclude=["*.tests", "*.tests.*", "tests.*", "tests"]),
     py_modules=[HOOK_MODULE_NAME],
     entry_points={
         'sceptre.hooks': [
