@@ -1,10 +1,9 @@
+# -*- coding: utf-8 -*-
+
 from sceptre.hooks import Hook
 
 
-class CustomHook(Hook):
-    def __init__(self, *args, **kwargs):
-        super(CustomHook, self).__init__(*args, **kwargs)
-
+class Custom(Hook):
     def run(self):
         """
         run is the method called by Sceptre. It should carry out the work
