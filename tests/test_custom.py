@@ -2,6 +2,7 @@
 
 from hook.custom import Custom
 
+
 class TestCustom:
     hook = Custom()
 
