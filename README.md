@@ -1,11 +1,34 @@
 # README
 
-Add your hook readme here. Remember to include the following:
+## Overview
 
-- Tell people how to install it (e.g. pip install ...).
-- Be clear about the purpose of the hook, its capabilities and limitations.
-- Tell people how to use it.
-- Give examples of the hook in use.
+A brief description. Be clear about the purpose of the hook,
+its capabilities and limitations.
 
-If you have any questions or encounter an issue
-[please open an issue](https://github.com/Sceptre/project/issues/new)
+## Installation
+
+Installation instructions
+
+To install directly from PyPI
+```shell
+pip install sceptre-hook-template
+```
+
+To install from the git repo
+```shell
+pip install git+https://github.com/Sceptre/sceptre-hook-template.git
+```
+
+## Usage/Examples
+
+```yaml
+parameters|sceptre_user_data:
+  <name>: !custom <args>
+```
+
+## Example
+
+```yaml
+before_create:
+  - !custom "HelloWorld"
+```
