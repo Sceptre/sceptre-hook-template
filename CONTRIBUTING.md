@@ -53,7 +53,7 @@ Poetry is used to manage versions and deployments. Follow the below steps to rel
    specific to the project. Refer to the [poetry documentation](https://python-poetry.org/docs/pyproject/)
    for a reference to the configurations.
 6. Add source code and tests for the project.
-7. Then you're done making changes, check that your changes pass
+7. When you're done making changes, check that your changes pass
    [linting](#Linting), [unit tests](#Unit-Tests) and have
    sufficient coverage.
 8. Submit a pull request through the GitHub website.

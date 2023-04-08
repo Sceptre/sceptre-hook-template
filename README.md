@@ -21,14 +21,18 @@ pip install git+https://github.com/Sceptre/sceptre-hook-template.git
 
 ## Usage/Examples
 
+Use the hook with a [hook point](https://docs.sceptre-project.org/latest/docs/hooks.html#hook-points)
+
 ```yaml
-parameters|sceptre_user_data:
-  <name>: !custom <args>
+hooks:
+  hook_point:
+    - !custom <args>
 ```
 
 ## Example
 
 ```yaml
-before_create:
-  - !custom "HelloWorld"
+hooks:
+  before_create:
+    - !custom "HelloWorld"
 ```
